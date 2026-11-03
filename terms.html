@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyrian - Terms of Use</title>
+    <meta name="description" content="Terms of Use for Lyrian - music player, AI stem separation, haptics, and Apple integrations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #08080a;
+            --card-bg: #121217;
+            --card-border: #23232e;
+            --card-hover: #191922;
+            --accent: #b588f7;
+            --accent-glow: rgba(181, 136, 247, 0.35);
+            --accent-soft: rgba(181, 136, 247, 0.12);
+            --accent-bright: #c084fc;
+            --text-main: #f3f3f6;
+            --text-muted: #9e9eb0;
+            --text-dim: #6a6a7a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 50% 10%, rgba(181, 136, 247, 0.1) 0%, transparent 60%),
+                radial-gradient(circle at 10% 90%, rgba(130, 80, 220, 0.05) 0%, transparent 50%);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px 60px;
+        }
+
+        .container {
+            max-width: 820px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent-bright);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14.5px;
+            transition: transform 0.2s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-2px);
+        }
+
+        .lang-switch {
+            display: inline-flex;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 3px;
+            gap: 2px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 5px 12px;
+            border-radius: 16px;
+            font-size: 12.5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--accent-bright);
+            color: #000000;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+        }
+
+        .highlight {
+            color: var(--accent-bright);
+        }
+
+        .date {
+            font-size: 13.5px;
+            color: var(--text-dim);
+            margin-bottom: 28px;
+            display: block;
+        }
+
+        .content-block {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--accent-bright);
+            background: var(--accent-soft);
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #ffffff;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 22px;
+            margin-bottom: 8px;
+            color: #e4e4ed;
+        }
+
+        p {
+            font-size: 14.5px;
+            line-height: 1.65;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 16px;
+            color: var(--text-muted);
+            font-size: 14.5px;
+            line-height: 1.6;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .highlight-box {
+            background: rgba(181, 136, 247, 0.08);
+            border-left: 3px solid var(--accent-bright);
+            padding: 14px 18px;
+            border-radius: 0 10px 10px 0;
+            margin: 18px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: #e2d7f8;
+            font-size: 14px;
+        }
+
+        .contact-email {
+            color: var(--accent-bright);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: var(--text-dim);
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 18px;
+            text-align: left;
+        }
+
+        .links-card {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            padding: 16px;
+            font-size: 14px;
+            flex-wrap: wrap;
+        }
+
+        .links-card a {
+            color: var(--text-muted);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .links-card a:hover {
+            color: var(--accent-bright);
+        }
+
+        .links-card span.sep {
+            color: var(--text-dim);
+        }
+
+        @media (max-width: 600px) {
+            .content-block { padding: 22px 18px; }
+            h1 { font-size: 26px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Navigation Header -->
+        <div class="nav-header">
+            <a href="index.html" class="back-link">
+                &larr; <span id="back-text">Back to Support</span>
+            </a>
+            <div class="lang-switch">
+                <button type="button" class="lang-btn active" id="btn-en" onclick="showLang('en')">English</button>
+                <button type="button" class="lang-btn" id="btn-pt" onclick="showLang('pt')">Português</button>
+            </div>
+        </div>
+
+        <h1 id="page-title"><span class="highlight">Lyrian</span> Terms of Use</h1>
+        <span class="date" id="page-date">Version 1.0 — Last updated: November 2026</span>
+
+        <!-- ENGLISH VERSION -->
+        <div id="section-en">
+            <div class="content-block">
+                <div class="section-tag">Terms & Conditions</div>
+                <h2>Agreement to Terms</h2>
+                <p>Welcome to Lyrian. These Terms of Use govern your access to and use of the Lyrian application for iPhone and Apple Watch. By downloading, accessing, or using the app, you agree to these Terms and our Privacy Policy.</p>
+
+                <h3>1. About the Application</h3>
+                <p>Lyrian offers audio playback, file importation, microphone recording, AI-driven musical component separation (stems), reactive visuals, and synchronized haptic vibration responses. It can also identify songs, provide access to a public demo audio library, and synchronize sensory experiences with compatible Apple Watches.</p>
+                <p>Audio recording is initiated actively by the user. In Live mode, the microphone captures ambient sound to generate immediate visuals, haptics, and song recognition without permanently storing the audio session.</p>
+
+                <h3>2. Conditions of Use</h3>
+                <p>You agree to use Lyrian in compliance with all applicable laws and third-party rights. Minors must use the application under parental or guardian supervision according to local regulations and content ratings. You are responsible for your device compatibility, internet connection, and any third-party subscription fees (e.g., Apple Music).</p>
+
+                <h3>3. Intellectual Property & User Content Responsibility</h3>
+                <p>Lyrian grants you a personal, non-exclusive, limited license to use the app on compatible devices. This license does not transfer ownership of the software, design, or branding.</p>
+                <div class="highlight-box">
+                    <p><strong>Copyright Notice:</strong> Rights to musical tracks, recordings, and album covers belong to their respective copyright holders. Importing audio or isolating vocal and instrumental stems does NOT transfer copyright or grant permission to publish, sell, distribute, or commercially exploit the results. You must possess all necessary rights and licenses for any audio you process.</p>
+                </div>
+
+                <h3>4. Well-being & Safety Disclaimer</h3>
+                <ul>
+                    <li><strong>Sensory Sensitivity:</strong> Dynamic visual animations, flashing lights, and repetitive haptic vibrations may cause discomfort in sensitive individuals. Adjust volume and haptic intensity to comfortable levels and stop using the app if you experience discomfort.</li>
+                    <li><strong>Situational Awareness:</strong> Do not use Lyrian while driving, operating heavy machinery, crossing traffic, or engaging in activities requiring vigilance.</li>
+                    <li><strong>No Medical Purpose:</strong> Lyrian is not a medical device, diagnostic tool, or emergency sound alarm. It does not replace medical consultation or hearing assistance devices.</li>
+                    <li><strong>AI Separation Limitations:</strong> Neural audio separation and song identification may produce artifacts, delays, or incomplete stem isolation. Perfect separation is not guaranteed.</li>
+                </ul>
+
+                <h3>5. External Integrations (Apple Services)</h3>
+                <p>Lyrian integrates with services such as CloudKit, ShazamKit, Apple Music, and WatchConnectivity. Availability is subject to Apple's terms and service conditions. Song recognition and inclusion in Shazam or Apple Music libraries represent metadata tracking, not the transmission or storage of your original microphone audio.</p>
+
+                <h3>6. Limitation of Liability</h3>
+                <p>To the maximum extent permitted by law, the creators of Lyrian are not liable for indirect or consequential damages arising from misuse of the app, illicit recordings, copyright infringement committed by users, or failure to follow safety guidelines.</p>
+
+                <h3>7. Governing Law & Contact</h3>
+                <p>These Terms are governed by the laws of Brazil, preserving consumer protection rights where applicable. For questions or support, contact:</p>
+                <p>Email: <a href="mailto:lyrianapp@gmail.com" class="contact-email">lyrianapp@gmail.com</a></p>
+            </div>
+        </div>
+
+        <!-- PORTUGUESE VERSION -->
+        <div id="section-pt" style="display: none;">
+            <div class="content-block">
+                <div class="section-tag">Termos & Condições</div>
+                <h2>Termos de Uso do Lyrian</h2>
+                <p>Bem-vindo ao Lyrian. Estes Termos de Uso regulam a utilização do aplicativo Lyrian para iPhone e Apple Watch. Ao baixar, acessar ou utilizar o app, você concorda com estes Termos e com nossa Política de Privacidade.</p>
+
+                <h3>1. Sobre o Aplicativo</h3>
+                <p>O Lyrian oferece reprodução e importação de arquivos de áudio, gravação pelo microfone, separação de componentes musicais por inteligência artificial (faixas isoladas), visualizações e respostas por vibração háptica. Também pode identificar músicas, acessar uma biblioteca de faixas públicas disponibilizada pelo app e sincronizar experiências com Apple Watch compatível.</p>
+                <p>A gravação de áudio para a biblioteca é iniciada pelo usuário no recurso de gravação. No modo Ao vivo, o microfone é utilizado para processar o som e gerar visualizações, vibrações e reconhecimento musical, sem salvar permanentemente o áudio da sessão.</p>
+
+                <h3>2. Condições de Uso</h3>
+                <p>Utilize o aplicativo de acordo com a legislação, estes Termos e os direitos de terceiros. A utilização por crianças e adolescentes exige supervisão adequada e respeito à classificação indicativa e às regras da plataforma. O funcionamento depende de aparelho compatível, permissões e espaço livre. Custos de conexão e serviços contratados pelo usuário (como Apple Music) são de sua responsabilidade.</p>
+
+                <h3>3. Licença de Uso e Propriedade Intelectual</h3>
+                <p>É concedida uma licença pessoal, limitada e não exclusiva para utilizar o Lyrian em dispositivos compatíveis. Essa licença não transfere a propriedade do software, marcas ou interface.</p>
+                <div class="highlight-box">
+                    <p><strong>Aviso de Direitos Autorais:</strong> Os direitos sobre músicas, gravações e capas pertencem aos respectivos titulares. Importar, separar voz e instrumentos, reconhecer ou modificar uma faixa não transfere direitos autorais nem concede licença para publicar, distribuir, vender ou explorar comercialmente o resultado. O usuário deve possuir as autorizações necessárias para o processamento de suas faixas.</p>
+                </div>
+
+                <h3>4. Segurança, Bem-Estar e Limitações dos Resultados</h3>
+                <ul>
+                    <li><strong>Sensibilidade Sensorial:</strong> Use volume e intensidade de vibração confortáveis. Animações, variações luminosas e vibrações podem causar desconforto em pessoas sensíveis. Interrompa o uso em caso de incômodo.</li>
+                    <li><strong>Atenção e Vigilância:</strong> Não utilize o aplicativo de maneira que prejudique sua atenção ao dirigir, operar máquinas, atravessar vias ou realizar atividades que exijam vigilância.</li>
+                    <li><strong>Sem Fins Médicos:</strong> O Lyrian não oferece diagnóstico, monitoramento de saúde ou alertas de emergência, não substituindo aparelhos ou orientação profissional de saúde.</li>
+                    <li><strong>Limitações Técnicas da IA:</strong> A separação por inteligência artificial e o reconhecimento musical podem apresentar imprecisões, atrasos ou isolamento imperfeito dependendo da qualidade do arquivo.</li>
+                </ul>
+
+                <h3>5. Serviços Apple e Conteúdos Externos</h3>
+                <p>O aplicativo utiliza serviços como CloudKit, ShazamKit, Apple Music e WatchConnectivity. Esses recursos estão sujeitos à disponibilidade e condições da Apple. O registro de uma música reconhecida refere-se à identificação da faixa e metadados, não ao envio da gravação do microfone para tais serviços.</p>
+
+                <h3>6. Responsabilidade por Uso Indevido</h3>
+                <p>Nos limites permitidos pela legislação aplicável, não nos responsabilizamos por danos decorrentes do uso indevido do aplicativo pelo usuário ou por terceiros, incluindo usos ilícitos, gravações sem as autorizações exigidas, violação de direitos autorais ou utilização em desacordo com as orientações de segurança.</p>
+
+                <h3>7. Legislação e Contato</h3>
+                <p>Aplicam-se as leis brasileiras, preservado o foro do consumidor quando cabível. Para dúvidas, suporte ou atendimento:</p>
+                <p>E-mail: <a href="mailto:lyrianapp@gmail.com" class="contact-email">lyrianapp@gmail.com</a></p>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="card links-card">
+            <a href="index.html" id="link-support">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                <span id="link-text-support">Support & FAQs</span>
+            </a>
+            <span class="sep">•</span>
+            <a href="privacy.html" id="link-privacy">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span id="link-text-privacy">Privacy Policy</span>
+            </a>
+            <span class="sep">•</span>
+            <a href="licenses.html" id="link-licenses">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                <span id="link-text-licenses">Open Source & Model Attributions</span>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2026 Lyrian. All rights reserved.
+        </div>
+    </div>
+
+    <script>
+        function showLang(lang) {
+            const isEn = lang === 'en';
+            document.getElementById('section-en').style.display = isEn ? 'block' : 'none';
+            document.getElementById('section-pt').style.display = isEn ? 'none' : 'block';
+            document.getElementById('btn-en').classList.toggle('active', isEn);
+            document.getElementById('btn-pt').classList.toggle('active', !isEn);
+
+            if (isEn) {
+                document.getElementById('back-text').textContent = 'Back to Support';
+                document.getElementById('page-title').innerHTML = '<span class="highlight">Lyrian</span> Terms of Use';
+                document.getElementById('page-date').textContent = 'Version 1.0 — Last updated: November 2026';
+                document.getElementById('link-text-support').textContent = 'Support & FAQs';
+                document.getElementById('link-text-privacy').textContent = 'Privacy Policy';
+                document.getElementById('link-text-licenses').textContent = 'Open Source & Model Attributions';
+            } else {
+                document.getElementById('back-text').textContent = 'Voltar para o Suporte';
+                document.getElementById('page-title').innerHTML = 'Termos de Uso <span class="highlight">Lyrian</span>';
+                document.getElementById('page-date').textContent = 'Versão 1.0 — Última atualização: Novembro de 2026';
+                document.getElementById('link-text-support').textContent = 'Suporte & Dúvidas';
+                document.getElementById('link-text-privacy').textContent = 'Política de Privacidade';
+                document.getElementById('link-text-licenses').textContent = 'Código Aberto & Licenças de IA';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyrian - Support & Community</title>
+    <meta name="description" content="Support, FAQs, and contact information for Lyrian - the app that transforms music into haptic vibrations and reactive visuals using AI stem separation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #08080a;
+            --card-bg: #121217;
+            --card-border: #23232e;
+            --card-hover: #191922;
+            --accent: #b588f7;
+            --accent-glow: rgba(181, 136, 247, 0.35);
+            --accent-soft: rgba(181, 136, 247, 0.12);
+            --accent-bright: #c084fc;
+            --text-main: #f3f3f6;
+            --text-muted: #9e9eb0;
+            --text-dim: #6a6a7a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 50% 15%, rgba(181, 136, 247, 0.12) 0%, transparent 60%),
+                radial-gradient(circle at 80% 80%, rgba(130, 80, 220, 0.05) 0%, transparent 50%);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px 60px;
+        }
+
+        .container {
+            max-width: 680px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Language Toggle */
+        .lang-switch-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 24px;
+        }
+
+        .lang-switch {
+            display: inline-flex;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 3px;
+            gap: 2px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 6px 14px;
+            border-radius: 16px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--accent-bright);
+            color: #000000;
+        }
+
+        /* Icon with luminous particle aura */
+        .icon-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+
+        .icon-aura {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 130px;
+            height: 130px;
+            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(14px);
+            z-index: 0;
+            animation: pulse-aura 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulse-aura {
+            0% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.6; }
+            100% { transform: translate(-50%, -50%) scale(1.15); opacity: 0.9; }
+        }
+
+        .app-icon {
+            position: relative;
+            z-index: 1;
+            width: 110px;
+            height: 110px;
+            border-radius: 26px;
+            object-fit: cover;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .highlight {
+            color: var(--accent-bright);
+            text-shadow: 0 0 20px rgba(192, 132, 252, 0.4);
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+
+        /* Cards */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 18px;
+            text-align: left;
+            transition: border-color 0.2s, background-color 0.2s;
+        }
+
+        .card:hover {
+            border-color: rgba(181, 136, 247, 0.35);
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--accent-bright);
+            background: var(--accent-soft);
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+
+        .card h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .card p {
+            font-size: 14.5px;
+            line-height: 1.6;
+            color: var(--text-muted);
+        }
+
+        .feature-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .pill {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 5px 12px;
+            font-size: 12px;
+            color: #d1d1db;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .pill-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--accent-bright);
+        }
+
+        /* Contact & Action Section */
+        .contact-box {
+            background: linear-gradient(145deg, #161520 0%, #101015 100%);
+            border: 1px solid rgba(181, 136, 247, 0.25);
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .email-label {
+            font-size: 12px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .email-address {
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffffff;
+            letter-spacing: 0.2px;
+            margin-bottom: 16px;
+            word-break: break-all;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 12px 24px;
+            border-radius: 10px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #e5e5ea;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--card-border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-bright);
+            background-color: var(--accent-soft);
+        }
+
+        /* FAQ Accordion */
+        .faq-item {
+            margin-top: 10px;
+            border-top: 1px solid var(--card-border);
+            padding-top: 12px;
+        }
+
+        .faq-question {
+            font-size: 14.5px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+
+        .faq-answer {
+            font-size: 13.5px;
+            line-height: 1.55;
+            color: var(--text-muted);
+        }
+
+        /* Quick Navigation Links */
+        .links-card {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            padding: 16px;
+            font-size: 14px;
+            flex-wrap: wrap;
+        }
+
+        .links-card a {
+            color: var(--text-muted);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .links-card a:hover {
+            color: var(--accent-bright);
+        }
+
+        .links-card span {
+            color: var(--text-dim);
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: var(--text-dim);
+            line-height: 1.6;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #20202a;
+            border: 1px solid var(--accent-bright);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 13px;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            z-index: 100;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 28px; }
+            .card { padding: 18px; }
+            .btn-group { flex-direction: column; width: 100%; }
+            .btn { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Language Switcher -->
+        <div class="lang-switch-container">
+            <div class="lang-switch">
+                <button type="button" class="lang-btn active" id="btn-en" onclick="setLang('en')">English</button>
+                <button type="button" class="lang-btn" id="btn-pt" onclick="setLang('pt')">Português</button>
+            </div>
+        </div>
+
+        <!-- App Icon with Aura -->
+        <div class="icon-wrapper">
+            <div class="icon-aura"></div>
+            <img src="icon.png" alt="Lyrian App Icon" class="app-icon">
+        </div>
+
+        <!-- Title & Subtitle -->
+        <h1 id="title"><span class="highlight">Lyrian</span> Support</h1>
+        <p class="subtitle" id="subtitle">Transform music into multisensory experiences of light, vibration, and motion. Need help or have feedback? We're here for you.</p>
+
+        <!-- About Lyrian Card -->
+        <div class="card">
+            <div class="card-tag" id="tag-about">About Lyrian</div>
+            <h2 id="about-heading">Feel the Music Beyond Hearing</h2>
+            <p id="about-text">
+                Lyrian deconstructs songs into isolated stems (vocals, drums, bass, and other) using state-of-the-art AI source separation models. It translates rhythm and frequencies into haptic vibrations and reactive audio-visualizers, making music an accessible, deeply immersive sensory journey.
+            </p>
+            <div class="feature-pills">
+                <span class="pill"><span class="pill-dot"></span> <span id="pill-1">AI Stem Separation</span></span>
+                <span class="pill"><span class="pill-dot"></span> <span id="pill-2">Haptic Vibrations</span></span>
+                <span class="pill"><span class="pill-dot"></span> <span id="pill-3">Reactive Visuals</span></span>
+                <span class="pill"><span class="pill-dot"></span> <span id="pill-4">Privacy-First Audio</span></span>
+            </div>
+        </div>
+
+        <!-- Support / Contact Card -->
+        <div class="contact-box">
+            <div class="email-label" id="label-contact">Get in Touch</div>
+            <div class="email-address">lyrianapp@gmail.com</div>
+            <div class="btn-group">
+                <a href="mailto:lyrianapp@gmail.com?subject=Lyrian%20Support%20Request" class="btn btn-primary" id="btn-send-email">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    Send Email
+                </a>
+                <button type="button" class="btn btn-secondary" onclick="copyEmail()" id="btn-copy-email">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    Copy Address
+                </button>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="card">
+            <div class="card-tag" id="tag-faq">Help & FAQ</div>
+            <h2 id="faq-heading">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" id="faq-q1">Is my audio kept private?</div>
+                <div class="faq-answer" id="faq-a1">Yes. Your audio files are processed strictly for playback, stem extraction, and sensory rendering. Your personal files are never sold, transmitted for advertising, or used to train third-party models.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" id="faq-q2">What audio files can I use?</div>
+                <div class="faq-answer" id="faq-a2">You can load your own DRM-free audio files (MP3, WAV, FLAC, AAC), record directly through the microphone, or explore our built-in royalty-free demo tracks right away.</div>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="card links-card">
+            <a href="privacy.html" id="link-privacy">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                Privacy Policy
+            </a>
+            <span>•</span>
+            <a href="terms.html" id="link-terms">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Terms of Use
+            </a>
+            <span>•</span>
+            <a href="licenses.html" id="link-licenses">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                Open Source & Model Attributions
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2026 Lyrian. All rights reserved.<br>
+            <span id="footer-tagline">Transforming sound into a multisensory voyage.</span>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">Email address copied!</div>
+
+    <script>
+        const content = {
+            en: {
+                title: '<span class="highlight">Lyrian</span> Support',
+                subtitle: "Transform music into multisensory experiences of light, vibration, and motion. Need help or have feedback? We're here for you.",
+                tagAbout: "About Lyrian",
+                aboutHeading: "Feel the Music Beyond Hearing",
+                aboutText: "Lyrian deconstructs songs into isolated stems (vocals, drums, bass, and other) using state-of-the-art AI source separation models. It translates rhythm and frequencies into haptic vibrations and reactive audio-visualizers, making music an accessible, deeply immersive sensory journey.",
+                pill1: "AI Stem Separation",
+                pill2: "Haptic Vibrations",
+                pill3: "Reactive Visuals",
+                pill4: "Privacy-First Audio",
+                labelContact: "Get in Touch",
+                btnSendEmail: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Send Email',
+                btnCopyEmail: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copy Address',
+                tagFaq: "Help & FAQ",
+                faqHeading: "Frequently Asked Questions",
+                faqQ1: "Is my audio kept private?",
+                faqA1: "Yes. Your audio files are processed strictly for playback, stem extraction, and sensory rendering. Your personal files are never sold, transmitted for advertising, or used to train third-party models.",
+                faqQ2: "What audio files can I use?",
+                faqA2: "You can load your own DRM-free audio files (MP3, WAV, FLAC, AAC), record directly through the microphone, or explore our built-in royalty-free demo tracks right away.",
+                linkPrivacy: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> Privacy Policy',
+                linkTerms: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Terms of Use',
+                linkLicenses: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg> Open Source & Model Attributions',
+                footerTagline: "Transforming sound into a multisensory voyage.",
+                toastCopied: "Email address copied!"
+            },
+            pt: {
+                title: 'Suporte <span class="highlight">Lyrian</span>',
+                subtitle: "Transforme música em experiências multissensoriais de luz, vibração e movimento. Precisa de suporte ou sugestões? Fale conosco.",
+                tagAbout: "Sobre o Lyrian",
+                aboutHeading: "Sinta a Música Além da Audição",
+                aboutText: "O Lyrian decompõe faixas musicais em instrumentos isolados (vocais, bateria, baixo e outros) usando modelos de IA de ponta para separação de fontes. O app traduz ritmos e frequências sonoras em vibrações hápticas e visualizadores dinâmicos, tornando a música uma experiência sensorial acessível e envolvente.",
+                pill1: "Separação por IA",
+                pill2: "Vibrações Hápticas",
+                pill3: "Visuais Dinâmicos",
+                pill4: "Privacidade de Áudio",
+                labelContact: "Entre em Contato",
+                btnSendEmail: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> Enviar E-mail',
+                btnCopyEmail: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copiar E-mail',
+                tagFaq: "Ajuda & Dúvidas",
+                faqHeading: "Perguntas Frequentes",
+                faqQ1: "O meu áudio permanece seguro e privado?",
+                faqA1: "Sim. Seus arquivos de áudio são processados exclusivamente para reprodução, separação e geração de efeitos sensoriais. Suas músicas nunca são vendidas, compartilhadas ou usadas para treinar modelos de terceiros.",
+                faqQ2: "Quais arquivos de música posso usar?",
+                faqA2: "Você pode carregar suas próprias faixas livres de DRM (MP3, WAV, FLAC, AAC), gravar sons diretamente pelo microfone ou experimentar as músicas demonstrativas livres de royalties incluídas no app.",
+                linkPrivacy: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> Política de Privacidade',
+                linkTerms: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Termos de Uso',
+                linkLicenses: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg> Código Aberto & Licenças de IA',
+                footerTagline: "Transformando o som em uma viagem multissensorial.",
+                toastCopied: "E-mail copiado com sucesso!"
+            }
+        };
+
+        let currentLang = 'en';
+
+        function setLang(lang) {
+            currentLang = lang;
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+
+            const t = content[lang];
+            document.getElementById('title').innerHTML = t.title;
+            document.getElementById('subtitle').textContent = t.subtitle;
+            document.getElementById('tag-about').textContent = t.tagAbout;
+            document.getElementById('about-heading').textContent = t.aboutHeading;
+            document.getElementById('about-text').textContent = t.aboutText;
+            document.getElementById('pill-1').textContent = t.pill1;
+            document.getElementById('pill-2').textContent = t.pill2;
+            document.getElementById('pill-3').textContent = t.pill3;
+            document.getElementById('pill-4').textContent = t.pill4;
+            document.getElementById('label-contact').textContent = t.labelContact;
+            document.getElementById('btn-send-email').innerHTML = t.btnSendEmail;
+            document.getElementById('btn-copy-email').innerHTML = t.btnCopyEmail;
+            document.getElementById('tag-faq').textContent = t.tagFaq;
+            document.getElementById('faq-heading').textContent = t.faqHeading;
+            document.getElementById('faq-q1').textContent = t.faqQ1;
+            document.getElementById('faq-a1').textContent = t.faqA1;
+            document.getElementById('faq-q2').textContent = t.faqQ2;
+            document.getElementById('faq-a2').textContent = t.faqA2;
+            document.getElementById('link-privacy').innerHTML = t.linkPrivacy;
+            document.getElementById('link-terms').innerHTML = t.linkTerms;
+            document.getElementById('link-licenses').innerHTML = t.linkLicenses;
+            document.getElementById('footer-tagline').textContent = t.footerTagline;
+        }
+
+        function copyEmail() {
+            navigator.clipboard.writeText("lyrianapp@gmail.com").then(() => {
+                const toast = document.getElementById("toast");
+                toast.textContent = content[currentLang].toastCopied;
+                toast.classList.add("show");
+                setTimeout(() => {
+                    toast.classList.remove("show");
+                }, 2500);
+            });
+        }
+    </script>
+</body>
+</html>

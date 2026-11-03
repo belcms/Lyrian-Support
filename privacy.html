@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyrian - Privacy Policy</title>
+    <meta name="description"
+        content="Privacy Policy for Lyrian. Learn how we handle your audio files, permissions, ShazamKit music recognition, Apple Watch sync, and AI stem separation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #08080a;
+            --card-bg: #121217;
+            --card-border: #23232e;
+            --card-hover: #191922;
+            --accent: #b588f7;
+            --accent-glow: rgba(181, 136, 247, 0.35);
+            --accent-soft: rgba(181, 136, 247, 0.12);
+            --accent-bright: #c084fc;
+            --text-main: #f3f3f6;
+            --text-muted: #9e9eb0;
+            --text-dim: #6a6a7a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image:
+                radial-gradient(circle at 50% 10%, rgba(181, 136, 247, 0.1) 0%, transparent 60%),
+                radial-gradient(circle at 10% 90%, rgba(130, 80, 220, 0.05) 0%, transparent 50%);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px 60px;
+        }
+
+        .container {
+            max-width: 820px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent-bright);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14.5px;
+            transition: transform 0.2s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-2px);
+        }
+
+        .lang-switch {
+            display: inline-flex;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 3px;
+            gap: 2px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 5px 12px;
+            border-radius: 16px;
+            font-size: 12.5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--accent-bright);
+            color: #000000;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+        }
+
+        .highlight {
+            color: var(--accent-bright);
+        }
+
+        .date {
+            font-size: 13.5px;
+            color: var(--text-dim);
+            margin-bottom: 28px;
+            display: block;
+        }
+
+        .content-block {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--accent-bright);
+            background: var(--accent-soft);
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #ffffff;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 22px;
+            margin-bottom: 8px;
+            color: #e4e4ed;
+        }
+
+        p {
+            font-size: 14.5px;
+            line-height: 1.65;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 16px;
+            color: var(--text-muted);
+            font-size: 14.5px;
+            line-height: 1.6;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .highlight-box {
+            background: rgba(181, 136, 247, 0.08);
+            border-left: 3px solid var(--accent-bright);
+            padding: 14px 18px;
+            border-radius: 0 10px 10px 0;
+            margin: 18px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            color: #e2d7f8;
+            font-size: 14px;
+        }
+
+        .contact-email {
+            color: var(--accent-bright);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .contact-email:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: var(--text-dim);
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 18px;
+            text-align: left;
+        }
+
+        .links-card {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            padding: 16px;
+            font-size: 14px;
+            flex-wrap: wrap;
+        }
+
+        .links-card a {
+            color: var(--text-muted);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .links-card a:hover {
+            color: var(--accent-bright);
+        }
+
+        .links-card span.sep {
+            color: var(--text-dim);
+        }
+
+        @media (max-width: 600px) {
+            .content-block {
+                padding: 22px 18px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Navigation Header -->
+        <div class="nav-header">
+            <a href="index.html" class="back-link">
+                &larr; <span id="back-text">Back to Support</span>
+            </a>
+            <div class="lang-switch">
+                <button type="button" class="lang-btn active" id="btn-en" onclick="showLang('en')">English</button>
+                <button type="button" class="lang-btn" id="btn-pt" onclick="showLang('pt')">Português</button>
+            </div>
+        </div>
+
+        <h1 id="page-title"><span class="highlight">Lyrian</span> Privacy Policy</h1>
+        <span class="date" id="page-date">Version 1.0 — Last updated: November 2026</span>
+
+        <!-- ENGLISH VERSION -->
+        <div id="section-en">
+            <div class="content-block">
+                <div class="section-tag">Privacy Overview</div>
+                <h2>Commitment to Your Privacy</h2>
+                <p>Lyrian is designed for iPhone and Apple Watch to transform music into an immersive, multisensory
+                    experience of sound, haptic vibration, and reactive visuals. Lyrian does not require creating an
+                    account. We believe your musical taste and audio files belong exclusively to you.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Key Principle:</strong> Audio stem separation with AI and visual/haptic generation occur
+                        <strong>strictly on your device</strong>. Lyrian does not collect or sell your personal data,
+                        nor do we use your songs or voice to train AI models.
+                    </p>
+                </div>
+
+                <h3>1. 100% On-Device AI Separation</h3>
+                <p>Lyrian utilizes open-source deep learning neural models, specifically <strong>HTDemucs</strong> and
+                    <strong>SCNet</strong>, to isolate musical stems (vocals, drums, bass, and other):
+                </p>
+                <ul>
+                    <li><strong>Strictly On-Device:</strong> All AI inference and stem isolation are executed locally on
+                        your device hardware (CoreML). Your audio files are never uploaded or streamed to external
+                        servers for AI processing.</li>
+                    <li><strong>No Model Training:</strong> Your files, tracks, and recordings are never incorporated
+                        into datasets for training, evaluating, or fine-tuning artificial intelligence models.</li>
+                    <li><strong>Storage:</strong> Imported tracks and extracted stems reside in the app’s local
+                        sandboxed storage on your device.</li>
+                </ul>
+
+                <h3>2. Live Mode</h3>
+                <ul>
+                    <li><strong>Live Mode (Ambient Processing):</strong> In Live mode, ambient sound captured by the
+                        microphone is processed transiently in memory to drive real-time haptics, visuals, and song
+                        recognition. <em>Live mode does not permanently save a recording of your ambient session.</em>
+                    </li>
+                </ul>
+
+                <h3>3. External Apple Services & Network Features</h3>
+                <p>While AI audio processing is strictly local, Lyrian connects to standard Apple services for specific
+                    features:</p>
+                <ul>
+                    <li><strong>ShazamKit (Music Recognition):</strong> The app generates acoustic signatures
+                        (mathematical hashes) from audio to identify songs. According to Apple documentation, these
+                        hashes cannot be used to reconstruct the original audio, and the raw audio is never sent to
+                        Apple. Identified songs may be added to your Shazam library or Apple Music if authorized.</li>
+                    <li><strong>Apple Music:</strong> With your permission, Lyrian checks subscription availability and
+                        allows adding identified tracks directly to your Apple Music library.</li>
+                    <li><strong>CloudKit (Public Demo Library):</strong> The app connects to Apple's public CloudKit
+                        database to let you browse and download curated demo tracks to a local cache. <em>Your personal
+                            audio files and recordings are never uploaded to CloudKit.</em></li>
+                    <li><strong>Album Artwork:</strong> Album art for recognized tracks is retrieved via standard
+                        ephemeral web requests, caching images in memory.</li>
+                    <li><strong>Apple Watch Companion:</strong> Lyrian uses Apple WatchConnectivity to securely sync
+                        track metadata, playback status, and synchronized haptic bass vibration pulses to paired Apple
+                        Watches.</li>
+                </ul>
+
+                <h3>4. Device Permissions</h3>
+                <p>Lyrian requests access only when necessary to perform requested actions:</p>
+                <ul>
+                    <li><strong>Media Library & Files:</strong> To import and play audio files (MP3, WAV, FLAC, AAC).
+                    </li>
+                    <li><strong>Microphone:</strong> To record tracks or analyze live ambient sound for haptic and
+                        visual rendering.</li>
+                    <li><strong>Haptic Engine:</strong> To generate synchronized tactile vibrations on iPhone and Apple
+                        Watch.</li>
+                </ul>
+
+                <h3>5. Third-Party Analytics & Advertising</h3>
+                <p>Lyrian contains <strong>no</strong> third-party advertising SDKs, no behavioral tracking tools, and
+                    no data brokers.</p>
+
+                <h3>6. Data Retention, Storage & Deletion</h3>
+                <p>You can manage and delete tracks and stem caches at any time within <em>Settings > Storage</em>. To
+                    delete all local data, snapshots, and preferences, remove the app completely using the iOS
+                    <strong>"Delete App"</strong> option (not merely offloading it).
+                </p>
+
+                <h3>7. Contact & Legal Rights (LGPD / GDPR)</h3>
+                <p>You may exercise your rights under applicable privacy legislation (such as Brazil's LGPD) to request
+                    confirmation, access, or clarification regarding your data. For any inquiries, reach us at:</p>
+                <p>Email: <a href="mailto:lyrianapp@gmail.com" class="contact-email">lyrianapp@gmail.com</a></p>
+            </div>
+        </div>
+
+        <!-- PORTUGUESE VERSION -->
+        <div id="section-pt" style="display: none;">
+            <div class="content-block">
+                <div class="section-tag">Visão Geral de Privacidade</div>
+                <h2>Nosso Compromisso com sua Privacidade</h2>
+                <p>Lyrian foi desenvolvido para iPhone e Apple Watch com o objetivo de
+                    transformar música em uma experiência multissensorial de som, vibração háptica e visualizadores
+                    dinâmicos. O app não exige cadastro ou criação de conta. Suas preferências e seus arquivos de áudio
+                    pertencem exclusivamente a você.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Princípio Fundamental:</strong> O processamento de separação musical por IA e a geração
+                        de sinais visuais e táteis ocorrem <strong>estritamente no seu dispositivo</strong>. O Lyrian
+                        não vende seus dados pessoais nem utiliza suas músicas ou voz para treinar modelos de
+                        inteligência artificial.</p>
+                </div>
+
+                <h3>1. Separação de Faixas por IA 100% Local (On-Device)</h3>
+                <p>O Lyrian utiliza modelos neurais de código aberto, especificamente <strong>HTDemucs</strong> e
+                    <strong>SCNet</strong>, para isolar faixas de instrumentos (vocais, bateria, baixo e outros):
+                </p>
+                <ul>
+                    <li><strong>Processamento Estritamente Local:</strong> Toda a inferência de inteligência artificial
+                        ocorre no hardware do seu próprio aparelho (CoreML). Suas músicas nunca são enviadas a
+                        servidores externos para separação de faixas.</li>
+                    <li><strong>Sem Treinamento de Modelos:</strong> Suas faixas, gravações e dados de áudio nunca são
+                        utilizados para compor bases de treinamento ou refinamento de modelos de IA.</li>
+                    <li><strong>Armazenamento Local:</strong> Arquivos importados e faixas isoladas resultantes
+                        permanecem armazenados no ambiente isolado (sandbox) do app no dispositivo.</li>
+                </ul>
+
+                <h3>2. Modo Ao Vivo</h3>
+                <ul>
+                    <li><strong>Modo Ao Vivo:</strong> O microfone capta o som do ambiente para gerar vibrações táteis,
+                        visualizadores e identificação musical em tempo real. <em>A análise ao vivo não equivale à
+                            gravação permanente da sua sessão.</em></li>
+                </ul>
+
+                <h3>3. Serviços Apple e Recursos Conectados</h3>
+                <p>O processamento acústico é local, mas o Lyrian utiliza serviços da Apple para recursos específicos:
+                </p>
+                <ul>
+                    <li><strong>ShazamKit (Reconhecimento Musical):</strong> Gera assinaturas acústicas (hashes
+                        matemáticos) para identificar faixas. De acordo com a Apple, essas assinaturas não permitem
+                        reconstruir o áudio original e o arquivo de áudio não é enviado. Músicas identificadas podem ser
+                        salvas na biblioteca do Shazam ou Apple Music conforme autorização.</li>
+                    <li><strong>Apple Music:</strong> Mediante autorização, consulta a disponibilidade da assinatura
+                        para permitir adicionar faixas reconhecidas à sua biblioteca.</li>
+                    <li><strong>CloudKit (Biblioteca Pública):</strong> Acessa o banco público da Apple para que você
+                        possa baixar faixas demonstrativas para cache local. <em>Suas gravações e áudios pessoais nunca
+                            são enviados para o CloudKit.</em></li>
+                    <li><strong>Capas de Álbuns:</strong> O carregamento de capas faz requisições normais de rede aos
+                        servidores de imagem, utilizando sessão efêmera e cache em memória.</li>
+                    <li><strong>Apple Watch:</strong> Utiliza WatchConnectivity para coordenar metadados, estado de
+                        reprodução e sequências de vibração háptica tátil no relógio pareado.</li>
+                </ul>
+
+                <h3>4. Permissões do Dispositivo</h3>
+                <p>O Lyrian solicita apenas as permissões necessárias para o funcionamento dos recursos:</p>
+                <ul>
+                    <li><strong>Arquivos e Mídia:</strong> Para importar e reproduzir faixas de áudio (MP3, WAV, FLAC,
+                        AAC).</li>
+                    <li><strong>Microfone:</strong> Para gravar faixas solicitadas ou analisar som ambiente no modo Ao
+                        vivo.</li>
+                    <li><strong>Motor Háptico (Vibração):</strong> Para gerar pulsos táteis sincronizados no iPhone e
+                        Apple Watch.</li>
+                </ul>
+
+                <h3>5. Rastreamento e Publicidade de Terceiros</h3>
+                <p>O Lyrian <strong>não</strong> contém bibliotecas de publicidade, ferramentas de rastreamento
+                    comportamental de terceiros nem vende dados para corretores.</p>
+
+                <h3>6. Retenção, Armazenamento e Exclusão</h3>
+                <p>Você pode excluir faixas e caches de processamento a qualquer momento em <em>Ajustes >
+                        Armazenamento</em>. Para apagar completamente todos os arquivos, históricos e preferências
+                    locais, utilize a opção do sistema de <strong>Apagar o App</strong> (em vez de apenas desinstalá-lo
+                    mantendo documentos).</p>
+
+                <h3>7. Seus Direitos (LGPD) e Contato</h3>
+                <p>Nos termos da Lei Geral de Proteção de Dados (LGPD), você pode solicitar esclarecimentos, confirmação
+                    de tratamento e exercer seus direitos através do nosso canal de privacidade:</p>
+                <p>E-mail: <a href="mailto:lyrianapp@gmail.com" class="contact-email">lyrianapp@gmail.com</a></p>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="card links-card">
+            <a href="index.html" id="link-support">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span id="link-text-support">Support & FAQs</span>
+            </a>
+            <span class="sep">•</span>
+            <a href="terms.html" id="link-terms">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                <span id="link-text-terms">Terms of Use</span>
+            </a>
+            <span class="sep">•</span>
+            <a href="licenses.html" id="link-licenses">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span id="link-text-licenses">Open Source & Model Attributions</span>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2026 Lyrian. All rights reserved.
+        </div>
+    </div>
+
+    <script>
+        function showLang(lang) {
+            const isEn = lang === 'en';
+            document.getElementById('section-en').style.display = isEn ? 'block' : 'none';
+            document.getElementById('section-pt').style.display = isEn ? 'none' : 'block';
+            document.getElementById('btn-en').classList.toggle('active', isEn);
+            document.getElementById('btn-pt').classList.toggle('active', !isEn);
+
+            if (isEn) {
+                document.getElementById('back-text').textContent = 'Back to Support';
+                document.getElementById('page-title').innerHTML = '<span class="highlight">Lyrian</span> Privacy Policy';
+                document.getElementById('page-date').textContent = 'Version 1.0 — Last updated: November 2026';
+                document.getElementById('link-text-support').textContent = 'Support & FAQs';
+                document.getElementById('link-text-terms').textContent = 'Terms of Use';
+                document.getElementById('link-text-licenses').textContent = 'Open Source & Model Attributions';
+            } else {
+                document.getElementById('back-text').textContent = 'Voltar para o Suporte';
+                document.getElementById('page-title').innerHTML = 'Política de Privacidade <span class="highlight">Lyrian</span>';
+                document.getElementById('page-date').textContent = 'Versão 1.0 — Última atualização: Novembro de 2026';
+                document.getElementById('link-text-support').textContent = 'Suporte & Dúvidas';
+                document.getElementById('link-text-terms').textContent = 'Termos de Uso';
+                document.getElementById('link-text-licenses').textContent = 'Código Aberto & Licenças de IA';
+            }
+        }
+    </script>
+</body>
+
+</html>

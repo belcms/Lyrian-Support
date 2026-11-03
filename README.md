@@ -28,15 +28,6 @@ This repository hosts the official static web pages (ready for **GitHub Pages** 
 
 ---
 
-## ✨ Implementation Highlights
-
-- **Instant Bilingual Switcher:** Every page features a fast, client-side language toggle (**English** and **Português**) with no page reload required.
-- **Thematic Dark Design:** Modern dark mode interface (`#08080a`) accented with luminous lavender/violet glows (`#b588f7` and `#c084fc`), matching Lyrian’s particle soundwave icon.
-- **Unified Vector SVG Icons:** Consistent inline SVG icons across navigation bars and quick-link cards for clean rendering on all screen densities.
-- **Responsive & Accessible Layout:** Fluid mobile-first grid built with the *Plus Jakarta Sans* typeface, optimized for iOS Safari, Android browsers, and desktop screens.
-
----
-
 ## 🔒 Privacy & Architecture Principles
 
 1. **100% On-Device AI Processing:** All neural network inference for **HTDemucs** and **SCNet** runs directly on the device hardware. User audio files and personal recordings are never transmitted to external cloud servers for processing, nor used to train third-party models.
@@ -48,12 +39,7 @@ This repository hosts the official static web pages (ready for **GitHub Pages** 
 
 ## 🚀 GitHub Pages Deployment
 
-To publish this website using GitHub Pages:
-
-1. Open your repository settings on GitHub: **Settings > Pages**.
-2. Under **Build and deployment > Source**, choose **Deploy from a branch**.
-3. Select branch `main` and folder `/ (root)`.
-4. Click **Save**. The live website will be available at `https://<your-username>.github.io/Lyrian---Support/`.
+The live website is available at `https://<your-username>.github.io/Lyrian---Support/`.
 
 ---
 

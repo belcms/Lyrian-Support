@@ -2,67 +2,68 @@
   <img src="icon.png" alt="Lyrian App Icon" width="120" style="border-radius: 26px; box-shadow: 0 10px 30px rgba(181, 136, 247, 0.3);" />
   <h1>Lyrian — Support, Privacy & Terms</h1>
   <p><strong>Transforming sound into a multisensory voyage of light, motion, and touch.</strong></p>
-  <p><em>Página oficial de suporte, termos de uso, política de privacidade e licenças do aplicativo Lyrian.</em></p>
+  <p><em>Official support center, terms of use, privacy policy, and open-source licenses for the Lyrian application.</em></p>
 </div>
 
 ---
 
-## 🌟 Sobre o Lyrian (About Lyrian)
+## 🌟 About Lyrian
 
-**Lyrian** é um aplicativo imersivo para **iPhone** e **Apple Watch** que transforma a experiência musical em algo multissensorial. 
+**Lyrian** is an immersive music player for **iPhone** and **Apple Watch** designed to transform the listening experience into a rich, multisensory journey.
 
-Utilizando modelos de inteligência artificial de última geração para separação de fontes sonoras executados **100% localmente no dispositivo (on-device via CoreML)**, o app isola instrumentos e vocais (*vocals, drums, bass, other*), convertendo frequências e ritmos em **vibrações táteis sincronizadas (Haptic Feedback)** e **visualizadores dinâmicos reativos em tempo real**.
+Powered by state-of-the-art deep learning neural models executed **100% locally on-device (via CoreML)**, the app deconstructs tracks into isolated audio stems (**vocals, drums, bass, other**). It dynamically translates frequencies and rhythms into **synchronized tactile haptic vibrations** and **real-time audio-reactive visualizers**, making music deeply accessible and tactile.
 
 ---
 
-## 📂 Estrutura do Repositório (Pages Structure)
+## 📂 Repository Structure
 
-Este repositório contém as páginas estáticas oficiais disponibilizadas publicamente (compatíveis com o **GitHub Pages**) para atender às exigências das diretrizes de revisão da Apple App Store, Google Play e legislações de proteção de dados (como LGPD e GDPR):
+This repository hosts the official static web pages (ready for **GitHub Pages** deployment) that fulfill the compliance and legal requirements for the Apple App Store, Google Play Store, and privacy regulations (such as GDPR and Brazil's LGPD):
 
-| Página | Arquivo | Descrição |
+| Page | File | Description |
 |---|---|---|
-| **Suporte & FAQ** | [`index.html`](index.html) | Central de suporte ao usuário, apresentação das funcionalidades, perguntas frequentes e canal direto de e-mail (`lyrianapp@gmail.com`). |
-| **Política de Privacidade** | [`privacy.html`](privacy.html) | Documentação detalhada sobre tratamento de dados, processamento estritamente local de IA, integrações Apple (ShazamKit, CloudKit, Apple Music, WatchConnectivity) e direitos LGPD. |
-| **Termos de Uso** | [`terms.html`](terms.html) | Condições gerais de uso, licença do software, responsabilidade de direitos autorais sobre áudios importados, limitações da IA e avisos de segurança/bem-estar sensorial. |
-| **Código Aberto & Licenças** | [`licenses.html`](licenses.html) | Cumprimento das exigências da **Licença MIT** para os modelos neurais **HTDemucs** e **SCNet**, além do aviso sobre faixas demo livres de royalties (CC0 / Domínio Público). |
+| **Support & FAQ** | [`index.html`](index.html) | Central user support hub, app overview, frequently asked questions, and direct support contact (`lyrianapp@gmail.com`). |
+| **Privacy Policy** | [`privacy.html`](privacy.html) | Transparent privacy disclosures, strictly on-device AI processing details, Apple service integrations (ShazamKit, CloudKit, Apple Music, WatchConnectivity), and data subject rights. |
+| **Terms of Use** | [`terms.html`](terms.html) | Terms of service, software license, user copyright responsibility for imported music, AI separation limitations, and sensory sensitivity/safety disclaimers. |
+| **Open Source & Licenses** | [`licenses.html`](licenses.html) | Full compliance with the **MIT License** terms for the **HTDemucs** and **SCNet** neural models, alongside acknowledgments for royalty-free demo tracks (CC0 / Public Domain). |
 
 ---
 
-## ✨ Destaques de Implementação (Web Design & Features)
+## ✨ Implementation Highlights
 
-- **Suporte Bilíngue Instantâneo:** Todas as páginas contam com alternador dinâmico de idiomas (**Inglês** e **Português**) sem recarregamento da página.
-- **Identidade Visual Temática:** Estilo moderno *dark mode* (`#08080a`) com realces em lavanda/violeta luminoso (`#b588f7` e `#c084fc`), harmonizado com a iconografia de partículas sonoras do app.
-- **Ícones Vetoriais SVG Coesos:** Navegação rápida padronizada entre todas as páginas com ícones SVG inline responsivos.
-- **Design Responsivo & Acessível:** Layout fluido e tipografia limpa (*Plus Jakarta Sans*), otimizado tanto para dispositivos móveis quanto desktop.
-
----
-
-## 🔒 Princípios de Privacidade & IA (Privacy Highlights)
-
-1. **Separação por IA 100% On-Device:** Toda a inferência dos modelos **HTDemucs** e **SCNet** é executada no processador do próprio dispositivo do usuário. Nenhum arquivo de áudio ou gravação pessoal é enviado para a nuvem para fins de inferência ou treinamento.
-2. **Reconhecimento Musical via ShazamKit:** As consultas utilizam apenas assinaturas acústicas (hashes matemáticos), sem transmissão do áudio original gravado.
-3. **Catálogo Público CloudKit:** Download estritamente unidirecional para cache local. O app não faz upload de músicas pessoais para o banco público.
-4. **Zero Rastreamento:** Ausência de bibliotecas de anúncios invasivos, rastreamento comportamental de terceiros ou venda de dados.
+- **Instant Bilingual Switcher:** Every page features a fast, client-side language toggle (**English** and **Português**) with no page reload required.
+- **Thematic Dark Design:** Modern dark mode interface (`#08080a`) accented with luminous lavender/violet glows (`#b588f7` and `#c084fc`), matching Lyrian’s particle soundwave icon.
+- **Unified Vector SVG Icons:** Consistent inline SVG icons across navigation bars and quick-link cards for clean rendering on all screen densities.
+- **Responsive & Accessible Layout:** Fluid mobile-first grid built with the *Plus Jakarta Sans* typeface, optimized for iOS Safari, Android browsers, and desktop screens.
 
 ---
 
-## 🚀 Como Publicar no GitHub Pages (Deployment)
+## 🔒 Privacy & Architecture Principles
 
-Para servir as páginas através do GitHub Pages:
-1. Acesse o repositório no GitHub: **Settings > Pages**.
-2. Em **Source**, selecione **Deploy from a branch**.
-3. Escolha a branch `main` e a pasta `/ (root)`.
-4. Clique em **Save**. O site estará disponível em `https://<seu-usuario>.github.io/Lyrian---Support/`.
+1. **100% On-Device AI Processing:** All neural network inference for **HTDemucs** and **SCNet** runs directly on the device hardware. User audio files and personal recordings are never transmitted to external cloud servers for processing, nor used to train third-party models.
+2. **ShazamKit Music Recognition:** Music identification queries rely strictly on mathematical acoustic signatures (hashes). Raw audio recordings are never sent to Apple.
+3. **CloudKit Public Catalog:** Audio tracks provided in the in-app public library are downloaded unidirectionally to a local device cache. Personal recordings and imported files are never uploaded to CloudKit.
+4. **Zero Tracking or Advertising:** Lyrian contains no third-party tracking scripts, no behavioral analytics SDKs, and does not sell or share data with data brokers.
 
 ---
 
-## 📬 Contato & Suporte (Contact)
+## 🚀 GitHub Pages Deployment
 
-Dúvidas, sugestões ou suporte técnico:
-- **E-mail:** [lyrianapp@gmail.com](mailto:lyrianapp@gmail.com)
+To publish this website using GitHub Pages:
+
+1. Open your repository settings on GitHub: **Settings > Pages**.
+2. Under **Build and deployment > Source**, choose **Deploy from a branch**.
+3. Select branch `main` and folder `/ (root)`.
+4. Click **Save**. The live website will be available at `https://<your-username>.github.io/Lyrian---Support/`.
+
+---
+
+## 📬 Contact & Support
+
+For technical assistance, feedback, or legal inquiries:
+- **Email:** [lyrianapp@gmail.com](mailto:lyrianapp@gmail.com)
 
 ---
 
 <div align="center">
-  <sub>&copy; 2026 Lyrian. Todos os direitos reservados.</sub>
+  <sub>&copy; 2026 Lyrian. All rights reserved.</sub>
 </div>
